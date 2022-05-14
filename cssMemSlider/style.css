@@ -1,0 +1,159 @@
+body {
+  background-color: #e5f4ff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.title {
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #227ba2;
+  text-align: center;
+}
+
+.switch {
+  display: none;
+}
+
+.slider__wrapper {
+  width: calc(35% - 30px);
+  background-color: #abdfff;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 1rem 0 ;
+  border: 8px solid #c9e9ff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px #8ad4ff;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% * 4);
+  height: 32em;
+  transition: 1s;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slide1 {
+  background: url(./assets/mem1.jpg) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slide2 {
+  background: url(./assets/mem2.jpg) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slide3 {
+  background: url(./assets/mem3.jpg) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slide4 {
+  background: url(./assets/mem4.jpg) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.slider__subtitles {
+  width: 100%;
+  max-width: 80%;
+  overflow: hidden;
+}
+
+.subtitles__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 400%;
+  transition: 1s;
+}
+
+.subtitle {
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-size: 1.5em;
+  color: #227ba2;
+  width: 25%;
+  margin: 0.5rem;
+}
+
+.slider__controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.controls__btn {
+  display: flex;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.switch__btn {
+  height: 1.2em;
+  width: 1.2em;
+  background-color: #c9e9ff;
+  border: 3px solid #8ad4ff;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.controls__btn:hover .switch__btn {
+  box-shadow: 0px 0px 10px 2px #e5f4ff;
+}
+
+.controls__btn:active .switch__btn {
+  background-color: #1d3d4e;
+}
+
+#slide1:checked ~ .slider__wrapper .controls .slider__controls .controls__btn .btn1, 
+#slide2:checked ~ .slider__wrapper .controls .slider__controls .controls__btn .btn2, 
+#slide3:checked ~ .slider__wrapper .controls .slider__controls .controls__btn .btn3, 
+#slide4:checked ~ .slider__wrapper .controls .slider__controls .controls__btn .btn4 {
+  background-color: #8ad4ff;
+  box-shadow: 0px 0px 10px 2px #e5f4ff;
+}
+
+#slide1:checked ~ .slider__wrapper .slider .slides,
+#slide1:checked ~ .slider__wrapper .controls .slider__subtitles .subtitles__wrapper {
+  transform: translateX(0);
+}
+#slide2:checked ~ .slider__wrapper .slider .slides,
+#slide2:checked ~ .slider__wrapper .controls .slider__subtitles .subtitles__wrapper {
+  transform: translateX(-25%)
+}
+#slide3:checked ~ .slider__wrapper .slider .slides,
+#slide3:checked ~ .slider__wrapper .controls .slider__subtitles .subtitles__wrapper {
+  transform: translateX(-50%)
+}
+#slide4:checked ~ .slider__wrapper .slider .slides,
+#slide4:checked ~ .slider__wrapper .controls .slider__subtitles .subtitles__wrapper {
+  transform: translateX(-75%)
+}
+
+
+
+
+
