@@ -200,6 +200,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .title {
+    font-size: 2em;
+  }
+  
   .slider__wrapper {
     width: calc(80% - 30px);
   }
@@ -211,7 +215,7 @@ body {
 
 @media (max-width: 320px) {
   .slides {
-    height: 15em;
+    height: 20em;
   }
 }
 
